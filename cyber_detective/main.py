@@ -527,7 +527,7 @@ class App(tk.Tk):
             self.case.solved = True
             messagebox.showinfo('CASE SOLVED','Correct! Leo controlled the backup account, exported the token and disabled alerts. The digital audit trail proves the breach.')
         elif self.accused.get() == 'Leo':
-            messagebox.showwarning('Insufficient proof','Your suspect is plausible, but you must DISCOVER and ANALYZE evidence #103, #107 and #108 before the case can be closed.')
+            messagebox.showwarning('Insufficient proof','Your suspect is plausible, but you must DISCOVER and ANALYZE evidences before the case can be closed.')
         else:
             messagebox.showwarning('Wrong suspect','The evidence does not establish this suspect as the culprit. Review the logs and try again.')
         self.refresh()
@@ -560,7 +560,7 @@ class App(tk.Tk):
                  f'Discovery history (stack): {d.history}',
                  f'Processed evidence (set): {sorted(d.processed)}',
                  f'Accusation attempts: {d.attempts}',
-                 '', 'CASE OBJECTIVE:', 'Discover evidence #103, #107, #108; queue and process all three;',
+                 '', 'CASE OBJECTIVE:', 'Discover evidence and queue and process all three;',
                  'then use the Suspects tab to accuse the person responsible.',
                  '', 'ALGORITHMS:', 'Linear search scans all evidence (O(n)).',
                  'Binary search uses sorted IDs (O(log n) search after sorting).',
